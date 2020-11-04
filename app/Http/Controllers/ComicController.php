@@ -14,9 +14,8 @@ class ComicController extends Controller
      */
     public function index()
     {
-        $data = Comic::all();
-
-        return view('comics.index', compact('data'));
+        $comics = Comic::all();
+        return view('crud.index', compact('comics'));
     }
 
     /**
@@ -26,7 +25,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        return view('comics.create');
+        //
     }
 
     /**
@@ -43,14 +42,13 @@ class ComicController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Comic $comics
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Comic $comics, $id)
     {
-        $comic = Comic::find($id);
-
-        return view('comics.show', compact('comic'));
+        $comics = Comic::find($id);
+        return view('crud.show', compact('comics'));
     }
 
     /**
