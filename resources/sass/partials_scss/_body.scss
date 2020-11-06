@@ -4,6 +4,9 @@ ul{
 li{
     list-style: none;
     margin-left: 20px;
+    a{
+        font-size: 30px;
+    }
 }
 h3{
     color:blue;
@@ -25,4 +28,7 @@ h2{
     margin-left: 20px;
     text-align: center;
     margin-top: 10px;
+}
+i{
+    cursor: pointer;
 }

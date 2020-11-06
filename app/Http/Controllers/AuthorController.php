@@ -95,6 +95,9 @@ class AuthorController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $item = Author::find($id);
+        $item->delete();
+        session()->flash('deleted', 'Utente cancellato');
+        return redirect()->route('authors.index');
     }
 }
