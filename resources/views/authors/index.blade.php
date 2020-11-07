@@ -15,6 +15,7 @@
                     @csrf
                     @method('DELETE')
                     <button type="submit">
+                        <label for="">Elimina </label>
                         <i class="fas fa-trash-alt"></i>
                     </button>
                 </form>
@@ -22,5 +23,6 @@
         </li>
     @endforeach
     <li><a href="{{route('authors.create')}}">Inserisci un autore</a></li>
+    <li><a href="{{route('home')}}">Torna alla home</a></li>
 </ul>   
 @endsection

@@ -82,6 +82,11 @@ class ComicController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $comic = Comic::find($id);
+        $comic->delete();
+        return redirect()->route('comics.index');
+    }
+    public function indexAjax(){
+        return view('crud.index-ajax');
     }
 }

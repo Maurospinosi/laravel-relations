@@ -8,9 +8,21 @@ use App\Comic;
 
 class ComicController extends Controller
 {
-    public function getAll(){
+    public function getAll()
+    {
+
         $comics = Comic::all();
+
         return response()->json($comics);
-        dd('comics');
+
+    }
+    public function getById($id)
+    {
+
+        $comic = Comic::find($id);
+
+        return response()->json($comic);
+        dd($comics);
+
     }
 }

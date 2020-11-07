@@ -14,4 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('comics', 'Api\ComicController@getAll' );
+Route::get('comics', 'Api\ComicController@getAll');
+Route::get('comics/{id}', 'Api\ComicController@getById');
+
