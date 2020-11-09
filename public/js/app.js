@@ -35318,14 +35318,12 @@ function renderComics(data) {
   for (var i = 0; i < data.length; i++) {
     var context = {
       'title': data[i].title,
-      'author': data[i].author,
-      'number': data[i].number
+      'cover': data[i].cover,
+      'id': data[i].id
     };
     var html = template(context);
     $('.ajax_list').append(html);
   }
-
-  console.log(data);
 }
 
 /***/ }),
